@@ -1,4 +1,4 @@
-/*jslint node white this */
+﻿/*jslint node white this */
 
 "use strict";
 var ActiveDirectory = require('activedirectory');
@@ -42,7 +42,7 @@ HtlActiveDirectory.prototype.login = function (username, password, onSuccess, on
     }
 
     this.adInstance = new ActiveDirectory({
-        url: 'ldaps://htl-wien5.schule',
+        url: 'ldaps://ldap.spengergasse.at',
         baseDN: 'DC=htl-wien5,DC=schule',
         /* Wichtig für LDAPS, da wir unbekannten Root CAs (der Domäne) vertrauen müssen */
         tlsOptions: {requestCert: true, rejectUnauthorized: false},
